@@ -1,0 +1,13 @@
+[Unit]
+Description=GLAuth
+Documentation=https://github.com/glauth/glauth
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=cloud_user
+WorkingDirectory=/opt/glauth
+Environment='JAVA_HOME=/usr/bin'
+ExecStart='/opt/glauth/glauth.sh'
